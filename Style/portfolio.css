@@ -7,16 +7,16 @@
 
 .header {
     background: #FFF8F3;
-    background-image: url(../images/header_bg.png), url(../images/developer.png);
+    background-image: url(../images/header_bg.png),url(../images/developer.png);
     background-repeat: no-repeat;
     background-position: bottom right, left;
-    background-size: 60%, contain;
+    background-size: 50%, contain;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 18px 200px 50px;
+    padding: 18px 100px 50px;
 }
 
 .nav-title {
@@ -62,7 +62,7 @@ nav li {
 /* banner style */
 .banner {
     display: flex;
-    margin: 0px 100px 0px 200px;
+    margin: 0px 100px;
     align-items: center;
 
 }
@@ -83,12 +83,19 @@ nav li {
     margin: 20px auto 30px;
     line-height: 30px;
     font-size: 18px;
+    padding-right: 200px;
 }
 
-
+/* main section */
 main {
-    margin: 130px 200px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
+
+section {
+    margin-top: 130px;
+}
+
 
 /* about section style */
 .about {
@@ -138,8 +145,8 @@ main {
     margin-top: 130px;
 }
 
-.what-i-do .section-description{
-    padding: 0 130px ;
+.what-i-do .section-description {
+    padding: 0 130px;
 }
 
 .skill-container {
@@ -224,7 +231,7 @@ main {
     display: flex;
     gap: 120px;
     background-color: #FFF8F3;
-    padding: 130px 200px;
+    padding: 130px 100px;
 }
 
 .connect .section-title {
@@ -249,13 +256,87 @@ main {
     font-size: 35px;
 }
 
-.message input[ type=text], input[type=email],
+.message input[ type=text],
+input[type=email],
 textarea {
     margin-bottom: 24px;
     width: 461px;
     border: none;
     padding: 12px 25px;
 }
-input{
+
+input {
     height: 50px;
+}
+
+.connect .section-description {
+    text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+    .header{
+        background-image: none;
+    }
+    
+    .banner,
+    .skill-container,
+    .resume-content,
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    nav{
+        padding: 10px;
+    }
+    .banner{
+        margin: 0;
+    }
+    .banner-description{
+        padding: 0;
+    }
+    .banner img{
+        width: 100%;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        padding: 20px;
+
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .what-i-do .section-description {
+        padding: 0;
+        margin: auto 20px;
+
+    }
+
+    .message input[ type=text],
+    input[type=email],
+    textarea{
+        padding: 0 0 0 5px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .skill-container {
+        flex-direction: column;
+    }
+
+}
+
+.hide {
+    display: none;
 }
