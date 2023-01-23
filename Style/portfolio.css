@@ -16,7 +16,7 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 18px 100px 50px;
+    padding: 18px 200px 50px;
 }
 
 .nav-title {
@@ -62,7 +62,7 @@ nav li {
 /* banner style */
 .banner {
     display: flex;
-    margin: 0px 100px;
+    margin: 0px 100px 0px 200px;
     align-items: center;
 
 }
@@ -290,8 +290,14 @@ input {
     nav{
         padding: 10px;
     }
+    .nav-title{
+        font-size: 30px;
+    }
     .banner{
         margin: 0;
+    }
+    .banner-title{
+        font-size: 50px;
     }
     .banner-description{
         padding: 0;
@@ -306,7 +312,7 @@ input {
     }
 
     .footer {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 20px;
 
     }
